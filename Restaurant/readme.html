@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        blockquote {
+            font-family: 'Nova Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Picker</h1>
+        <p>
+            We are given a CSV file containing the prices of every item on every menu of every restaurant in the town of Ogreville.
+            In addition, the restaurants of Ogreville also offer Value Meals, which are groups of several items, at a discounted price.
+            Below is the file's format
+        </p>
+        <p>
+            <strong>for lines that define a price for a single item:</strong>
+        </p>
+        <blockquote>
+            <p>restaurant ID, price, item label</p>
+        </blockquote>
+        <p>
+            <strong>for lines that define the price for a Value Meal </strong>(there can be any number of items in a value meal)
+        </p>
+        <blockquote>
+            <p>restaurant ID, price, item 1 label, item 2 label, ...</p>
+        </blockquote>
+        <p>All restaurant IDs are integers, all item labels are lower case letters and underscores, and the price is a decimal number.</p>
+        <p>
+            We need a program that accepts...
+            <ul>
+                <li>the town's price file</li>
+                <li>a list of item labels that someone wants to eat for dinner</li>
+            </ul>
+            and outputs
+            <ul>
+                <li>the restaurant they should go to</li>
+                <li>the total price it will cost them</li>
+            </ul>
+
+            It is okay to purchase extra items if the total cost is minimized.
+        </p>
+        <p>
+            Here are some sample data sets, program inputs, and the expected result:
+        </p>
+        <hr />
+        <p>
+            <strong>Data File data.csv</strong>
+        </p>
+        <blockquote>
+            <p>
+                1, 4.00, burger 1, 8.00, tofu_log<br />
+                2, 5.00, burger 2, 6.50, tofu_log
+            </p>
+        </blockquote>
+        <p>
+            <strong>Program Input</strong>
+        </p>
+        <blockquote>
+            <p>&gt; program data.csv burger tofu_log</p>
+        </blockquote>
+        <p>
+            <strong>Expected Output</strong>
+        </p>
+        <blockquote>
+            <p>=&gt; 2, 11.5</p>
+        </blockquote>
+        <hr />
+        <p>
+            <strong>Data File </strong><strong>data.csv</strong>
+        </p>
+        <blockquote>
+            <p>
+                3, 4.00, chef_salad<br />
+                3, 8.00, steak_salad_sandwich<br />
+                4, 5.00, steak_salad_sandwich<br />
+                4, 2.50, wine_spritzer
+            </p>
+        </blockquote>
+        <p>
+            <strong>Program Input</strong>
+        </p>
+        <blockquote>
+            <p>&gt; program data.csv chef_salad, wine_spritzer</p>
+        </blockquote>
+        <p>
+            <strong>Expected Output</strong>
+        </p>
+        <blockquote>
+            <p>
+                =&gt; null <em>(or false or something to indicate that no matching restaurant could be found)</em>
+            </p>
+        </blockquote>
+        <hr />
+        <p>
+            <strong>Instructions to run the project</strong>
+        </p>
+        <ul>
+            <li>
+                .Net Core 3.1 is required to run this project.
+            </li>
+            <li>
+                You can check your current version of .net by executing <code>dotnet --version</code> from your Command Prompt.
+            </li>
+            <li>
+               To Build & Run the project :
+                <ul>
+                    <li>
+                        Navigate to the solution folder from your Command Prompt and use the following commands:
+                    </li>
+                    <li>
+                        <code>dotnet build</code> to build.
+                    </li>
+                    <li>
+                        <code>dotnet run --project Restaurant</code> to run.
+                    </li>
+                    <li>
+                        <code>dotnet test</code> to run tests.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+       
+
+        <hr />
+
+        <p><strong>Hint</strong></p>
+        <p>
+            If one or more of the supplied unit tests fail, it means your solution isn't complete--but if all the unit tests pass, that is not a guarantee that your solution is complete. Make sure you double check the specs to ensure you are handling valid scenarios that may not be in the provided input file.
+
+            <hr />
+
+        <p>A base program has already been created in this solution. Create the remaining pieces of this program to complete the program.</p>
+    </div>
+
+</body>
+</html>
